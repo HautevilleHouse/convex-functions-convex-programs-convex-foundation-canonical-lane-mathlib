@@ -1,0 +1,9 @@
+import convex_functions_convex_programs_convex_foundation_canonical_lane_mathlib.GateLemmas
+namespace HautevilleHouse
+namespace convex_functions_convex_programs_convex_foundation_canonical_lane_mathlib
+structure ConstrainedTheoremClosure where
+  admissible :: intro :: constraint :: consequence :: proof ::
+theorem canonical : ConstrainedTheoremClosure :=
+  ConstrainedTheoremClosure.intro
+end convex_functions_convex_programs_convex_foundation_canonical_lane_mathlib
+end HautevilleHouse

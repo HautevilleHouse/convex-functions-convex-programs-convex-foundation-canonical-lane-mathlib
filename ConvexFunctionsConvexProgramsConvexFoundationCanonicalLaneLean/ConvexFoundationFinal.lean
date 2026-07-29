@@ -1,0 +1,18 @@
+import canonicalLaneMathlib.AdmissibleClass
+import ConvexFunctionsConvexProgramsConvexFoundationCanonicalLaneLean.ConvexFunction
+import ConvexFunctionsConvexProgramsConvexFoundationCanonicalLaneLean.ConvexProgram
+import ConvexFunctionsConvexProgramsConvexFoundationCanonicalLaneLean.OptimalityConditions
+import ConvexFunctionsConvexProgramsConvexFoundationCanonicalLaneLean.FenchelDuality
+
+namespace HautevilleHouse
+namespace ConvexFunctionsConvexProgramsConvexFoundationCanonicalLaneLean
+
+def ConstrainedConvexFoundationClosure (A : AdmissibleClass) : Prop :=
+  bridgeClosed A ∧ gateClosed A
+
+theorem constrained_convex_foundation_endgame (A : AdmissibleClass) :
+  ConstrainedConvexFoundationClosure A := by
+  exact And.intro (bridge_from_admissible_class A) (gate_from_admissible_class A)
+
+end ConvexFunctionsConvexProgramsConvexFoundationCanonicalLaneLean
+end HautevilleHouse
